@@ -1,0 +1,131 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+#todo-list {
+  width: 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#todo-details {
+  margin-top: 20px;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#calendar {
+  width: 70%;
+  min-width: 1400px;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.week-th {
+  height: 100px;
+  width: 100%;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.weeks-day-th {
+  display: inline-block;
+  height: 100px;
+  line-height: 100px;
+  width: 150px;
+  /*background-color: aquamarine;*/
+  text-align: center;
+  background: skyblue;
+  border: 1px solid #888888;
+}
+
+.week {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weeks-day {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100px;
+  line-height: 40px;
+  width: 150px;
+  background-color: floralwhite;
+  text-align: left;
+  border: 1px solid #888888;
+  overflow: hidden;
+  position: relative; /* 相对于此元素定位伪元素 */
+}
+
+.weeks-day .date {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+}
+
+.date::before {
+  content: '';
+  margin: 0 3px 0 5px;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #222222;
+  /*vertical-align: middle;*/
+  transform: translateY(-50%);
+}
+
+.weeks-day .task {
+  background: orangered;
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  width: 70%;
+  font-size: 10px;
+  color: #cccccc;
+  flex-wrap: nowrap;
+  margin: 1px 0;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+  padding-left: 8px;
+}
+
+.weeks-day.before {
+  background-color: lightcyan;
+}
+
+.weeks-day.after {
+  background-color: lightcyan;
+}
+
+.weeks-day:hover {
+  background-color: mediumspringgreen;
+  color: #fff;
+}

@@ -1,0 +1,11 @@
+{
+	"main": "index.html",
+	"logo": "icon.png",
+	"features": [
+		{
+		  "code": "calendar",
+		  "explain": "日历项目管理工具",
+			"cmds":["calendar", "日历"]
+		}
+	]
+}
